@@ -78,7 +78,6 @@ ex_israel %>%
 ex_internet %>%
   dplyr::glimpse()
 ```
-
 ## Robot
 
 ```{r}

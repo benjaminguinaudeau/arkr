@@ -2,7 +2,7 @@
 #' @export
 read_holding <- function(url){
   url %>%
-    tabulizer::extract_tables() %>%
+    tabulizer::extract_tables(method = "stream") %>%
     purrr::map_dfr(tibble::as_tibble) %>%
     purrr::set_names(c("rank", head(t(as.matrix(.[1,])), -1))) %>%
     tail(-1) %>%
