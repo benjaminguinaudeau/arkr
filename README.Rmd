@@ -1,0 +1,96 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# arkr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of arkr is to obtain data on the structure of the ETF proposed by ark.
+
+## Installation
+
+``` r
+remotes::install_github("ropensci/tabulizer")
+devtools::install_github("benjaminguinaudeau/arkr")
+```
+
+```{r}
+library(arkr)
+```
+
+
+## Innovation
+
+```{r}
+# get_holding("innovation")
+ex_innov %>% dplyr::glimpse()
+```
+
+## Genomic
+
+```{r}
+# get_holding("genomic") 
+ex_genom %>%
+  dplyr::glimpse()
+```
+
+## FinTech
+
+```{r}
+# get_holding("fintech") 
+ex_fintech %>%
+  dplyr::glimpse()
+```
+
+## Space
+
+```{r}
+# get_holding("space") 
+ex_space %>%
+  dplyr::glimpse()
+```
+
+## Israel
+
+```{r}
+# get_holding("israel") 
+ex_israel %>%
+  dplyr::glimpse()
+```
+
+## Internet
+
+```{r}
+# get_holding("internet") 
+ex_internet %>%
+  dplyr::glimpse()
+```
+
+## Robot
+
+```{r}
+# get_holding("robot") 
+ex_robot %>%
+  dplyr::glimpse()
+```
+
+## 3D Printing
+
+```{r}
+# get_holding("printing") 
+ex_printing %>%
+  dplyr::glimpse()
+```
