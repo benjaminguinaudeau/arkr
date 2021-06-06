@@ -1,7 +1,13 @@
 #' read_holding
 #' @export
 read_holding <- function(url){
-  url %>%
+  tmp <- tempfile()
+
+  res <- httr::GET(url,
+                    httr::add_headers(`user-agent` = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 Edg/90.0.818.62"))
+  writeBin(res$content, tmp)
+
+  tmp %>%
     tabulizer::extract_tables(method = "stream") %>%
     purrr::map_dfr(tibble::as_tibble) %>%
     purrr::set_names(head(t(as.matrix(.[1,])))) %>%
