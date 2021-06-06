@@ -4,11 +4,12 @@ read_holding <- function(url){
   url %>%
     tabulizer::extract_tables(method = "stream") %>%
     purrr::map_dfr(tibble::as_tibble) %>%
-    purrr::set_names(c("rank", head(t(as.matrix(.[1,])), -1))) %>%
+    purrr::set_names(head(t(as.matrix(.[1,])))) %>%
+    # purrr::set_names(c("rank", head(t(as.matrix(.[1,])), -1))) %>%
     tail(-1) %>%
     janitor::clean_names() %>%
     dplyr::mutate_all(numerize) %>%
-    dplyr::mutate(day = lubridate::today(tzone = "CET"))
+    dplyr::mutate(stamp = lubridate::now(tzone = "CET"))
 }
 
 #' read_holding
@@ -27,8 +28,9 @@ get_holding <- function(etf = c("innovation", "genomic", "fintech", "space",
     "printing" = "https://ark-funds.com/wp-content/fundsiteliterature/holdings/THE_3D_PRINTING_ETF_PRNT_HOLDINGS.pdf"
     # Crypto/Mobility
   )
-
-  read_holding(url)
+  url %>%
+    read_holding() %>%
+    dplyr::mutate(etf = paste("ark", etf, sep = "_"))
 }
 
 #' numerize

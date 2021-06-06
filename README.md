@@ -23,7 +23,8 @@ library(arkr)
 ## Innovation
 
 ``` r
-# get_holding("innovation")
+# ex_innov <- get_holding("innovation")
+# usethis::use_data(ex_innov, overwrite = T)
 ex_innov %>% dplyr::glimpse()
 #> Rows: 54
 #> Columns: 8
@@ -40,9 +41,9 @@ ex_innov %>% dplyr::glimpse()
 ## Genomic
 
 ``` r
-# get_holding("genomic") 
-ex_genom %>%
-  dplyr::glimpse()
+# ex_genom <- get_holding("genomic")
+# usethis::use_data(ex_genom, overwrite = T)
+ex_genom %>% dplyr::glimpse()
 #> Rows: 60
 #> Columns: 8
 #> $ rank           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…
@@ -58,9 +59,9 @@ ex_genom %>%
 ## FinTech
 
 ``` r
-# get_holding("fintech") 
-ex_fintech %>%
-  dplyr::glimpse()
+# ex_fintech <- get_holding("fintech")
+# usethis::use_data(ex_fintech, overwrite = T)
+ex_fintech %>% dplyr::glimpse()
 #> Rows: 43
 #> Columns: 8
 #> $ rank           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…
@@ -76,9 +77,9 @@ ex_fintech %>%
 ## Space
 
 ``` r
-# get_holding("space") 
-ex_space %>%
-  dplyr::glimpse()
+# ex_space <- get_holding("space")
+# usethis::use_data(ex_space, overwrite = T)
+ex_space %>% dplyr::glimpse()
 #> Rows: 39
 #> Columns: 8
 #> $ rank           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…
@@ -94,9 +95,9 @@ ex_space %>%
 ## Israel
 
 ``` r
-# get_holding("israel") 
-ex_israel %>%
-  dplyr::glimpse()
+# ex_israel <- get_holding("israel")
+# usethis::use_data(ex_israel, overwrite = T)
+ex_israel %>% dplyr::glimpse()
 #> Rows: 59
 #> Columns: 8
 #> $ rank           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…
@@ -112,9 +113,9 @@ ex_israel %>%
 ## Internet
 
 ``` r
-# get_holding("internet") 
-ex_internet %>%
-  dplyr::glimpse()
+# ex_internet <- get_holding("internet")
+# usethis::use_data(ex_internet, overwrite = T)
+ex_internet %>% dplyr::glimpse()
 #> Rows: 48
 #> Columns: 8
 #> $ rank           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…
@@ -130,9 +131,9 @@ ex_internet %>%
 ## Robot
 
 ``` r
-# get_holding("robot") 
-ex_robot %>%
-  dplyr::glimpse()
+# ex_robot <- get_holding("robot")
+# usethis::use_data(ex_robot, overwrite = T)
+ex_robot %>% dplyr::glimpse()
 #> Rows: 45
 #> Columns: 7
 #> $ rank         <chr> "1   TESLA INC", "2   JD.COM INC-ADR", "3   TRIMBLE INC"…
@@ -147,9 +148,9 @@ ex_robot %>%
 ## 3D Printing
 
 ``` r
-# get_holding("printing") 
-ex_printing %>%
-  dplyr::glimpse()
+# ex_printing <- get_holding("printing")
+# usethis::use_data(ex_printing, overwrite = T)
+ex_printing %>% dplyr::glimpse()
 #> Rows: 58
 #> Columns: 8
 #> $ rank           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…

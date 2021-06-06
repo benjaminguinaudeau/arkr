@@ -35,61 +35,62 @@ library(arkr)
 ## Innovation
 
 ```{r}
-# get_holding("innovation")
+# ex_innov <- get_holding("innovation")
+# usethis::use_data(ex_innov, overwrite = T)
 ex_innov %>% dplyr::glimpse()
 ```
 
 ## Genomic
 
 ```{r}
-# get_holding("genomic") 
-ex_genom %>%
-  dplyr::glimpse()
+# ex_genom <- get_holding("genomic")
+# usethis::use_data(ex_genom, overwrite = T)
+ex_genom %>% dplyr::glimpse()
 ```
 
 ## FinTech
 
 ```{r}
-# get_holding("fintech") 
-ex_fintech %>%
-  dplyr::glimpse()
+# ex_fintech <- get_holding("fintech")
+# usethis::use_data(ex_fintech, overwrite = T)
+ex_fintech %>% dplyr::glimpse()
 ```
 
 ## Space
 
 ```{r}
-# get_holding("space") 
-ex_space %>%
-  dplyr::glimpse()
+# ex_space <- get_holding("space")
+# usethis::use_data(ex_space, overwrite = T)
+ex_space %>% dplyr::glimpse()
 ```
 
 ## Israel
 
 ```{r}
-# get_holding("israel") 
-ex_israel %>%
-  dplyr::glimpse()
+# ex_israel <- get_holding("israel")
+# usethis::use_data(ex_israel, overwrite = T)
+ex_israel %>% dplyr::glimpse()
 ```
 
 ## Internet
 
 ```{r}
-# get_holding("internet") 
-ex_internet %>%
-  dplyr::glimpse()
+# ex_internet <- get_holding("internet")
+# usethis::use_data(ex_internet, overwrite = T)
+ex_internet %>% dplyr::glimpse()
 ```
 ## Robot
 
 ```{r}
-# get_holding("robot") 
-ex_robot %>%
-  dplyr::glimpse()
+# ex_robot <- get_holding("robot")
+# usethis::use_data(ex_robot, overwrite = T)
+ex_robot %>% dplyr::glimpse()
 ```
 
 ## 3D Printing
 
 ```{r}
-# get_holding("printing") 
-ex_printing %>%
-  dplyr::glimpse()
+# ex_printing <- get_holding("printing")
+# usethis::use_data(ex_printing, overwrite = T)
+ex_printing %>% dplyr::glimpse()
 ```
